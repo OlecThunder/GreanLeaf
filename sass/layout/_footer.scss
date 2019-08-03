@@ -1,0 +1,110 @@
+.footer{
+  background-color: $color-grey-dark-3;
+  height: 50rem;
+  font-size: 1.4rem;
+  padding: 10rem 0;
+
+  @include respond(tab-port){
+    padding: 8rem 0;
+  }
+
+  @include respond(tab-land){
+    height: 60rem;
+  }
+
+  @include respond(phone){
+    height: 55rem;
+  }
+
+  &__logo{
+    text-align: center;
+    
+    &--img{
+      width: 15rem;
+      height: auto;
+      overflow: hidden;
+      margin-top: 0rem;
+      @include respond(tab-port){
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  &__collection{
+    list-style: none;
+    display: block;
+    width: 60%;
+    text-align: center;
+    margin: 8rem auto;
+    @include respond(tab-port){
+      margin: 4rem auto;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 2rem;
+      border-top: 1px solid $color-grey-dark;
+    }
+
+    &--item{
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:not(:first-of-type){
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__text{
+    width: 60%;
+    @include respond(phone){
+      width: 80%;
+    }
+    display: block;
+    margin: 8rem auto;
+    @include respond(tab-port){
+      margin: 4rem auto;
+    }
+    font-size: 1.4rem;
+    color: $color-white;
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 2rem;
+      border-top: 1px solid $color-grey-dark;
+    }
+  }
+
+  &__container{
+    width: 50%;
+    float: left;
+    @include respond(tab-port){
+      text-align: center;
+      width: 100%;
+      float: none;
+    }
+  }
+
+
+  & a:link,
+  & a:visited{
+    font-size: 1.4rem;
+    color: $color-grey-light-1;
+    background-color: $color-grey-dark-3;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s;
+  }
+
+  & a:hover,
+  & a:active{
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, .4);
+      transform: rotate(5deg) scale(1.3);
+  }
+}
